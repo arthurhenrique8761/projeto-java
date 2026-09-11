@@ -1,4 +1,4 @@
-import model.Project;
+import model.Projeto;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,16 +10,24 @@ public class Main {
         System.out.println("Desenvolvido em Java");
         System.out.println("Versão: 1.0");
 
-        Projeto projeto = new Projeto();
+        Projeto projeto1 = new Projeto(
+            1,
+            "Sistema Acadêmico",
+            "Software para gerenciamento acadêmico",
+            "Software",
+            "Em desenvolvimento"
+        );
 
-        Projeto.setId(1);
-        Projeto.setNome("Sistema Acadêmico");
-        Projeto.setDescricao("Sistema para gerenciamento acadêmico");
-        Projeto.setCategoria("Software");
-        Projeto.setStatus("Em desenvolvimento");
-
-        // imprimir os dados do objeto
-
+        Projeto projeto2 = new Projeto(
+            2,
+            "Site Institucional",
+            "Web site de uma instituição",
+            "Web",
+            "Concluído"
+        );
+        
+        projeto1.exibirDados();
+        projeto2.exibirDados();
 
     }
 }
